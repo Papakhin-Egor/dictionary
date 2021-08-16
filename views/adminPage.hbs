@@ -1,0 +1,45 @@
+{{! <header class="header">
+  <div class="title">
+    <h1>Marketing Dictionary</h1>
+  </div>
+</header> }}
+<section class="search">
+  <form action="/admin" class="searchForm" method="POST">
+    <input
+      type="text"
+      placeholder="Search..."
+      class="loginSearch loginInput loginStyle"
+      name="word"
+    />
+    <button class="searchBtn loginBtn loginStyle">Find it</button>
+  </form>
+</section>
+
+<section class="registrUserSection">
+  <a href="/signup">
+    <button class="registrUserButton loginBtn loginStyle" type="submit">New User
+      Registration</button>
+  </a>
+</section>
+
+<section class="loginSectionAdmin">
+  <div class="wrapper" style="min-height: 70vh">
+    <div id="adminMain">
+      {{#if users}}
+        <div class="list-group" style="height: 120%">
+          {{#each users}}
+            <div id={{this.id}} class="list-group-item">
+              <div class="user-items">{{this.email}}</div>
+              <div class="user-items">{{this.name}}</div>
+              <div class="user-items">{{this.role}}</div>
+              <div class="buttonAdmin">
+                <button class="editButton">Edit</button>
+                <button class="deleteButton">Delete</button>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

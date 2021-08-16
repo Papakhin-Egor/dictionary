@@ -1,0 +1,32 @@
+{{! <header class="header">
+  <div class="title">
+    <h1>Marketing Dictionary</h1>
+  </div>
+</header> }}
+{{#if error}}
+  <span>{{error}}</span>
+{{/if}}
+<section class="loginSection">
+  <div class="wrapper">
+    <form action="/" method="POSt" class="loginForm">
+      <p class="loginLabel">Email</p>
+      <input
+        class="loginInput loginStyle"
+        type="text"
+        placeholder="Your username"
+        name="email"
+      />
+
+      <p class="loginLabel">Password</p>
+      <input
+        class="loginInput loginStyle"
+        type="password"
+        placeholder="Your password"
+        name="password"
+      />
+
+      <button class="loginStyle loginBtnMain">Log in</button>
+    </form>
+  </div>
+</section>
+{{! <script src="js/loginPage.js"></script> }}

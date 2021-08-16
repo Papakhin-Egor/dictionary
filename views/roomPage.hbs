@@ -1,0 +1,38 @@
+<section class="search">
+  <form action="/roompage" class="searchForm" method="POST">
+    <input
+      type="text"
+      placeholder="Search..."
+      class="loginSearch loginInput loginStyle"
+      name="word"
+    />
+    <button class="searchBtn loginBtn loginStyle">Find it</button>
+  </form>
+</section>
+<div class="sort">
+  
+  <div class="sortWrapper">
+    <div class="letters engLang">
+    </div>
+  </div>
+  <div class="sortWrapper">
+    <div class="letters rusLang">
+    </div>
+  </div>
+</div>
+<section class="postcards">
+  <div class="wrapper_card">
+    {{#each rooms}}
+      <div class="card" data-id="{{this.id}}">
+        <div class="title">
+          <h2>{{this.title}}</h2>
+        </div>
+        <div class="descript">
+          <span>{{this.discription}}</span>
+        </div>
+        <button class="loginStyle cardBtn">Look more</button>
+      </div>
+    {{/each}}
+  </div>
+</section>
+<script defer src="js/roomPage.js"></script>

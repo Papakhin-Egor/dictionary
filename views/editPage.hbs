@@ -1,0 +1,32 @@
+  {{!-- <script defer src="/js/adminFront.js"></script> --}}
+  <div class="containerEdit">
+  <div class="editContainer">
+<form id="userEditForm">
+{{#if card}}
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input name="email" value={{card.email}} type="email" class="form-control loginStyle loginBtn" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input name="password" type="current-password" class="form-control loginStyle loginBtn" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label>Name</label>
+    <input name="name" value={{card.name}} type="text" class="form-control loginStyle loginBtn" placeholder="name">
+  </div>
+    <div class="form-group">
+    <label>Room</label>
+    <input value={{card.roomId}} name="room" type="number" class="form-control loginStyle loginBtn" placeholder="Room Number">
+  </div>
+  <div class="form-group">
+    <label>Role</label>
+    <input name="role" value={{card.role}} type="text" class="form-control loginStyle loginBtn" placeholder="name">
+  </div>
+  <button id={{card.id}} class="btn btn-primary loginBtn loginStyle">Submit</button>
+{{/if}}
+</form>
+  </div>
+  </div>
+

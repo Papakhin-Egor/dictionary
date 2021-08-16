@@ -1,0 +1,35 @@
+  <script defer src="/js/adminFront.js"></script>
+  <script defer src="/js/moderFront.js"></script>
+    <div class="containerEdit">
+  <div class="editContainer">
+<form method="POST" action="/signup" >
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email</label>
+    <input name="email"  type="email" class="form-control loginStyle loginBtn" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input name="password" type="current-password" class="form-control loginStyle loginBtn" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label>Name</label>
+    <input name="name" type="text" class="form-control loginStyle loginBtn" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <label>Room</label>
+    <input name="room" type="text" class="form-control loginStyle loginBtn" placeholder="Room Number">
+  </div>
+{{#if user.role.admin}}
+  <div class="form-group">
+    <label>Role</label>
+    <select class="form-control loginStyle loginBtn"  name="role">
+      <option value="user">Пользователь</option>
+      <option value="manager">Менеджер</option>
+      <option value="admin">Администратор</option>
+    </select>
+  </div>
+{{/if}}
+  <button id={{user.id}} class="btn btn-primary loginBtn loginStyle">Submit</button>
+</form>
+  </div>
+  </div>

@@ -1,0 +1,568 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto";
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+}
+
+body:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.loginSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 700px;
+  margin-top: 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 700px;
+  background-color: #f9f9f9;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 25px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: flex-start;
+  min-height: 300px;
+  width: 550px;
+  font-size: 20px;
+}
+
+.loginStyle {
+  min-height: 50px;
+  border-radius: 20px;
+  font-weight: 300;
+  font-size: 22px;
+  padding: 15px;
+}
+
+.textArea {
+  min-height: 100px;
+  border-radius: 20px;
+  font-weight: 300;
+  font-size: 22px;
+  padding: 15px;
+}
+
+.loginBtn {
+  width: 250px;
+  text-align: left;
+  padding: 10px 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.loginBtn:hover {
+  cursor: pointer;
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.loginBtnMain {
+  width: 250px;
+  text-align: left;
+  padding: 10px 15px;
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.links {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.applying {
+  margin-top: 10px;
+}
+
+.Btn {
+  text-align: center;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+header a:not(:last-child) {
+  margin-right: 14px;
+}
+
+header a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  height: 17px;
+  width: 1px;
+  right: -10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20%;
+}
+
+.postcards {
+  display: flex;
+  justify-content: center;
+  min-height: 70%;
+  padding: 20px;
+}
+
+.wrapper_card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: space-around;
+  min-height: 600px;
+  width: 1200px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 20px 0px;
+  width: 300px;
+  height: 400px;
+  padding: 10px;
+  background: rgba(241, 239, 239, 0.6);
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+
+.descript {
+  position: relative;
+  width: 270px;
+  height: 260px;
+  padding: 9px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.descript span {
+  line-height: 18px;
+  font-size: 16px;
+  text-overflow: ellipsis;
+}
+
+.cardBtn {
+  width: 150px;
+  font-size: 18px;
+}
+
+.searchBtn {
+  margin: 0px 15px;
+  width: 105px;
+}
+
+.loginSearch {
+  width: 440px;
+}
+
+.sort {
+  margin: 10px 0;
+  display: flex;
+  position: relative;
+  height: 50px;
+}
+
+.sortWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.letters {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.letter {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 20px;
+}
+
+.createForm {
+  width: 60%;
+  min-height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.createPostcard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 600px;
+  width: 600px;
+  margin: auto;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 25px;
+}
+
+.createCardButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.createTitle {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 30px;
+}
+
+.createPostcardHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.createPostcardHead h1 {
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+}
+
+.createCardTitle {
+  padding: 10px 0 10px 0;
+}
+
+.cardTitle {
+  display: inline-block;
+  width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.modalWrapper {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.createModal {
+  position: absolute;
+  top: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-height: 600px;
+  width: 700px;
+  padding: 15px;
+  background: rgba(241, 239, 239, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 25px;
+}
+
+.modalTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 250px;
+  font-size: 20px;
+  border-radius: 25px;
+}
+
+.title {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+}
+
+.mainTitle {
+  margin: 0 auto;
+}
+
+.descHowUseContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 350px;
+  width: 600px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.modalDescriptionHowUse {
+  padding: 7px;
+  border-radius: 25px;
+}
+
+.modalPush {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  text-align: left;
+  margin: 5px;
+  margin-top: 25px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.modalText {
+  position: relative;
+  height: 390px;
+  width: 290px;
+  padding: 10px;
+  overflow: scroll;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.loginLabel {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 10px 0px;
+}
+
+.modalCreateWrapper {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.createPostcard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 500px;
+  width: 600px;
+  margin: auto;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: rgba(241, 239, 239, 0.8);
+  border-radius: 25px;
+}
+
+.createCardButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  text-align: left;
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.createPostcardHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.createPostcardHead h1 {
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+}
+
+.closeWrapper {
+  position: relative;
+}
+
+.commentBtn {
+  width: 300px;
+}
+
+.close {
+  position: absolute;
+  right: -265px;
+  top: -550px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 36px;
+  width: 6px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.closeModal {
+  right: -315px;
+  top: -565px;
+}
+
+/* .comments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+
+.commentsContainer {
+  position: absolute;
+  top: 20vh;
+  min-height: 600px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.commentModal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-height: 600px;
+  width: 700px;
+  padding: 15px;
+  background: rgba(241, 239, 239, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 25px;
+}
+/* .commentsContainerView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  width: 600px;
+  min-height: 50px;
+  background-color: white;
+} */
+
+/* .createModalRoom {
+  position: absolute;
+  top: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-height: 800px;
+  width: 700px;
+  padding: 15px;
+  background: rgba(241, 239, 239, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 25px;
+} */
+
+.commentTextInput {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  width: 700px;
+  padding: 15px;
+  min-height: 70px;
+  background: rgba(241, 239, 239, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 25px;
+}
+
+.commentArea {
+  width: 450px;
+  min-height: 50px;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.commentBtnArea {
+  width: 200px;
+  margin-top: 0;
+}
+
+.comment {
+  width: 550px;
+  text-align: center;
+  min-height: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  padding: 10px;
+  background-color: rgba(241, 239, 239, 0.8);
+  color: rgba(0, 0, 0, 0.9);
+}

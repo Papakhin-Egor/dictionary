@@ -1,0 +1,22 @@
+<script defer src="/js/moderFront.js"></script>
+<div class="containerEdit">
+  <div class="editContainer">
+<form id="moderEditForm">
+{{#if user}}
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input name="email" value={{user.email}} type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">New password</label>
+    <input name="password" type="current-password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label>Name</label>
+    <input name="name" value={{user.name}} type="text" class="form-control" placeholder="name">
+  </div>
+  <button id={{user.id}} class="btn btn-primary">Submit</button>
+{{/if}}
+</form>
+ </div>
+  </div>

@@ -1,0 +1,20 @@
+<script defer src="/js/moderFront.js"></script>
+
+<div id="moderMain">
+{{#if users}}
+<div class="list-group">
+    {{#each users}}
+  <div id={{this.id}} class="list-group-item">
+    <div class="user-items">Email: {{this.email}}</div>
+    <div class="user-items">Login: {{this.name}}</div>
+    <div class="user-items">Room: {{this.roomId}}</div>
+    <div class="buttonAdmin">
+      <button class="editButton">Edit</button>
+      <button class="deleteButton">Delete</button>
+    </div> 
+  </div>
+    {{/each}}
+</div>
+{{/if}}
+</div>
+<a href="/signup">Добавить юзера</a>

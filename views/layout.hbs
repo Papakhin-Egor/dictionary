@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{! <script defer src="js/application.js"></script> }}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Dictionary</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    {{!-- <link rel="stylesheet" href="/css/styleRoom.css" /> --}}
+    <script defer src="/js/adminFront.js"></script>
+    <link rel="stylesheet" href="/css/style1.css" />
+    <link rel="stylesheet" href="/css/editPage.css" />
+    <title>Dictionary</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="mainTitle">
+        <a href="/mainPage">
+          <h1>Marketing Dictionary</h1>
+        </a>
+      </div>
+      <div class="links">
+        {{#if user.role.admin}}
+          <a href="/roompage" class="first">Комната</a>
+          <a href="/admin" class="first">Управление</a>
+          <a href="/mainpage" class="first">Главная</a>
+          <a href="/logout" class="first">Выход</a>
+        {{/if}}
+        {{#if user.role.manager}}
+          <a href="/roompage" class="first">Комната</a>
+          <a href="/moder" class="first">Управление</a>
+          <a href="/mainpage" class="first">Главная</a>
+          <a href="/logout" class="first">Выход</a>
+        {{/if}}
+        {{#if user.role.user}}
+          <a href="/roompage" class="first">Комната</a>
+          <a href="/mainpage" class="first">Главная</a>
+          <a href="/logout" class="first">Выход</a>
+        {{/if}}
+      </div>
+    </header>
+    {{{body}}}
+    <footer class="footer" style="margin-bottom: 0%">
+      <p>Elbrus Bootcamp 2021</p>
+    </footer>
+  </body>
+</html>

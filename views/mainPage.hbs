@@ -1,0 +1,55 @@
+{{!-- <header class="header">
+  <div class="title">
+    <h1>Marketing Dictionary</h1>
+  </div>
+  <div class="links">
+    {{#if user.role}}
+    <a href="/admin" class="first">Управление</a>
+    {{/if}}
+    <a href="/roomPage" class="first">Комната</a>
+    <a href="/logout">Выход</a>
+  </div>
+</header> --}}
+<section class="search">
+  <form action="/mainpage" class="searchForm" method="POST">
+    <input
+      type="text"
+      placeholder="Search..."
+      class="loginSearch loginInput loginStyle"
+      name="word"
+    />
+    <button class="searchBtn loginBtn loginStyle">Find it</button>
+  </form>
+  {{#if user.role.admin}}
+    <button class="createPostcardBtn loginBtn loginStyle Btn">Create Post Card</button>
+  {{/if}}
+  {{#if user.role.manager}}
+    <button class="createPostcardBtn loginBtn loginStyle Btn">Create Post Card</button>
+  {{/if}}
+</section>
+<div class="sort">
+  <div class="sortWrapper">
+    <div class="letters engLang">
+    </div>
+  </div>
+  <div class="sortWrapper">
+    <div class="letters rusLang">
+    </div>
+  </div>
+</div>
+<section class="postcards">
+  <div class="wrapper_card">
+    {{#each card}}
+      <div class="card" data-id="{{this.id}}">
+        <div class="title">
+          <h2 class="cardTitle">{{this.title}}</h2>
+        </div>
+        <div class="descript">
+          <span>{{this.discription}}</span>
+        </div>
+        <button class="loginStyle cardBtn">Look more</button>
+      </div>
+    {{/each}}
+  </div>
+</section>
+<script defer src="js/mainPage.js"></script>
